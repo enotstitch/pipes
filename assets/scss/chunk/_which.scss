@@ -7,25 +7,28 @@
 		margin: 0;
 		margin-bottom: 80px;
 		font-size: 32px;
+		line-height: 126%;
 		text-align: center;
 		text-transform: uppercase;
 	}
 
 	&__cards {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		gap: 15px;
 	}
 
 	&__card {
 		border-radius: 10px;
-		max-width: 289px;
+		max-width: 285px;
 		background-color: var(--light-color);
 	}
 
 	&__img {
 		border-radius: 10px 10px 0 0;
 		height: auto;
-		max-width: 289px;
+		max-width: 285px;
 	}
 
 	&__subtitle {
