@@ -4,6 +4,7 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 105px;
+		gap: 45px;
 	}
 
 	&__img {
@@ -11,14 +12,12 @@
 		max-width: 278px;
 	}
 
-	&__inner {
-		max-width: 860px;
-	}
-
 	&__title {
 		margin: 0;
 		margin-bottom: 35px;
 		font-size: 32px;
+		line-height: 126%;
+		text-transform: uppercase;
 		color: var(--accent-color);
 	}
 
@@ -35,8 +34,9 @@
 
 	&__cards {
 		display: flex;
-		align-items: center;
+		align-items: stretch;
 		justify-content: space-between;
+		gap: 50px;
 	}
 }
 
@@ -46,16 +46,26 @@
 	justify-content: end;
 	border-radius: 20px;
 	padding: 50px;
-	padding-left: 0;
 	width: 100%;
 	min-height: 210px;
 	max-width: 565px;
 	font-size: 30px;
 	color: var(--light-color);
+	background-position: center left 50px;
+	background-repeat: no-repeat;
 	background-color: var(--san-juan-color);
 
 	&__text {
 		margin: 0;
-		max-width: 270px;
+		max-width: 305px;
+		line-height: 126%;
+	}
+
+	&--price {
+		background-image: url('@img/about/about-2.svg');
+	}
+
+	&--grade {
+		background-image: url('@img/about/about-3.svg');
 	}
 }
