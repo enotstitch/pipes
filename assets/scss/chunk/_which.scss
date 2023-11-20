@@ -1,0 +1,38 @@
+.which {
+	&__bg-color {
+		background-color: var(--concrete-color);
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 80px;
+		font-size: 32px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__card {
+		border-radius: 10px;
+		max-width: 289px;
+		background-color: var(--light-color);
+	}
+
+	&__img {
+		border-radius: 10px 10px 0 0;
+		height: auto;
+		max-width: 289px;
+	}
+
+	&__subtitle {
+		margin: 0;
+		padding: 40px 15px 50px;
+		font-size: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
