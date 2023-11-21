@@ -1,7 +1,7 @@
-.which {
+.projects {
 	&__title {
 		margin: 0;
-		margin-bottom: 80px;
+		margin-bottom: 110px;
 		font-size: 32px;
 		line-height: 126%;
 		text-align: center;
@@ -10,30 +10,31 @@
 
 	&__cards {
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
 		justify-content: space-between;
 		gap: 15px;
 	}
 
 	&__card {
-		border-radius: 10px;
-		max-width: 285px;
-		background-color: var(--light-color);
+		border: 2px solid var(--accent-color);
+		border-radius: 20px;
+		max-width: 350px;
 	}
 
 	&__img {
-		border-radius: 10px 10px 0 0;
-		width: 285px;
-		height: 183px;
+		border-radius: 20px 20px 0 0;
+		width: 346px;
+		height: 330px;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 
-	&__subtitle {
+	&__text {
 		margin: 0;
-		padding: 40px 15px 50px;
+		padding: 30px 25px 70px;
 		font-size: 20px;
+		line-height: 126%;
 		text-align: center;
 		text-transform: uppercase;
 	}
