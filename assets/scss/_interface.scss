@@ -1,4 +1,8 @@
 .section {
 	padding-top: 45px;
 	padding-bottom: 95px;
+
+	&--gray-bg {
+		background-color: var(--concrete-color);
+	}
 }

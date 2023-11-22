@@ -1,0 +1,100 @@
+.team {
+	&__title {
+		margin: 0;
+		margin-bottom: 110px;
+		font-size: 32px;
+		line-height: 126%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__cards {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__card {
+		border: 2px solid var(--accent-color);
+		border-radius: 20px;
+		padding-bottom: 25px;
+		max-width: 350px;
+	}
+
+	&__wrap {
+		border-radius: 15px 15px 0 0;
+		padding: 40px 25px 30px;
+		background-color: var(--accent-color);
+	}
+
+	&__img {
+		margin-right: auto;
+		margin-bottom: 15px;
+		margin-left: auto;
+		border-radius: 100px;
+		width: 173px;
+		height: 173px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__subtitle {
+		margin: 0;
+		margin-bottom: 15px;
+		font-size: 20px;
+		line-height: 126%;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--light-color);
+	}
+
+	&__text {
+		margin: 0;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 126%;
+		text-align: center;
+		color: var(--light-color);
+	}
+
+	&__inner {
+		padding: 40px 25px 0;
+	}
+}
+
+.team-inner {
+	&__title {
+		margin: 0;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 126%;
+		text-transform: capitalize;
+	}
+
+	&__text {
+		margin: 0;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 126%;
+		text-transform: capitalize;
+	}
+
+	&__btn {
+		display: block;
+		margin: 0;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 20px;
+		padding: 10px 25px;
+		font-family: Montserrat, sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 20px;
+		line-height: 126%;
+		color: var(--light-color);
+		background-color: var(--accent-color);
+	}
+}
