@@ -10,16 +10,12 @@
 	}
 
 	&__card {
-		max-width: 200px;
-	}
-
-	&__center {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 30px;
-		min-width: 40px;
-		min-height: 52px;
+		gap: 25px;
+		max-width: 200px;
 	}
 
 	&__icon {
@@ -33,6 +29,7 @@
 		font-size: 20px;
 		line-height: 126%;
 		text-align: center;
+		text-transform: lowercase;
 		color: var(--light-color);
 	}
 }
