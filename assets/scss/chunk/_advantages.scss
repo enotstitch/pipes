@@ -1,0 +1,31 @@
+.advantages {
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		border-radius: 20px;
+		padding: 55px 45px;
+		max-width: 890px;
+		background-color: var(--gallery-color);
+	}
+
+	&__text {
+		margin: 0;
+		max-width: 565px;
+		font-family: Poppins, sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 126%;
+	}
+
+	&__icon {
+		width: 130px;
+	}
+}

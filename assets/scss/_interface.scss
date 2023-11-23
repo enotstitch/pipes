@@ -5,4 +5,19 @@
 	&--gray-bg {
 		background-color: var(--concrete-color);
 	}
+
+	&--hero-bg {
+		padding-top: 95px;
+		padding-bottom: 50px;
+		height: 905px;
+		background-image: linear-gradient(
+			90deg,
+			var(--gradient-color) 30.98%,
+			rgb(30 30 30 / 0%) 99.81%
+		),
+			url('@img/hero/hero-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
