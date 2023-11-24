@@ -28,3 +28,11 @@
 	text-transform: uppercase;
 	color: var(--dark-text-color);
 }
+
+.item {
+	@include adaptive-font(24, 16);
+	padding-left: 35px;
+	font-weight: 500;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
