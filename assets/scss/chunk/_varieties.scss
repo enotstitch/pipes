@@ -1,0 +1,54 @@
+.varieties {
+	&__wrap {
+		margin-bottom: 90px;
+	}
+
+	&__text {
+		@include adaptive-font(20, 14);
+		margin: 0;
+		margin-bottom: 35px;
+		font-weight: 500;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		max-width: 275px;
+		gap: 15px;
+	}
+
+	&__item {
+		background-image: url('@img/varieties/varieties-1.svg');
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__cards {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__card {
+		border: 6px solid var(--accent-color);
+		border-radius: 15px;
+		max-width: 365px;
+	}
+
+	&__img {
+		border-radius: 10px;
+		width: 354px;
+		height: 513px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

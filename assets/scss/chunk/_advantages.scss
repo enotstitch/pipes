@@ -17,12 +17,11 @@
 	}
 
 	&__text {
+		@include adaptive-font(24, 20);
 		margin: 0;
 		max-width: 565px;
 		font-family: Poppins, sans-serif;
 		font-weight: 400;
-		font-size: 24px;
-		line-height: 126%;
 	}
 
 	&__icon {

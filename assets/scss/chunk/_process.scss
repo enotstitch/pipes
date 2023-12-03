@@ -1,0 +1,26 @@
+.process {
+	&__title {
+		margin-bottom: 85px;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__text {
+		@include adaptive-font(20, 14);
+		margin: 0;
+		font-weight: 500;
+	}
+
+	&__link {
+		text-decoration: underline;
+		transition: 0.5s;
+
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}

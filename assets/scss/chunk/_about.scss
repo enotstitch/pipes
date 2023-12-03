@@ -13,11 +13,8 @@
 	}
 
 	&__title {
-		margin: 0;
+		@include adaptive-font(32, 16);
 		margin-bottom: 35px;
-		font-size: 32px;
-		line-height: 126%;
-		text-transform: uppercase;
 		color: var(--accent-color);
 	}
 
@@ -49,13 +46,13 @@
 	width: 100%;
 	min-height: 210px;
 	max-width: 565px;
-	font-size: 30px;
 	color: var(--light-color);
 	background-position: center left 50px;
 	background-repeat: no-repeat;
 	background-color: var(--san-juan-color);
 
 	&__text {
+		@include adaptive-font(30, 20);
 		margin: 0;
 		max-width: 305px;
 		line-height: 126%;
