@@ -17,6 +17,21 @@
 		gap: 25px;
 		max-width: 200px;
 	}
+
+	&__icon {
+		width: 40px;
+		height: 52px;
+	}
+
+	&__text {
+		margin: 0;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 126%;
+		text-align: center;
+		text-transform: lowercase;
+		color: var(--light-color);
+	}
 }
 
 .hero-content {
