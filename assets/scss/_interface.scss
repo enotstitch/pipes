@@ -45,6 +45,15 @@
 			display: none;
 		}
 	}
+
+	@media (max-width: 1200px) {
+		margin-bottom: 70px;
+
+		&::after {
+			bottom: -50px;
+			width: 315px;
+		}
+	}
 }
 
 .item {
