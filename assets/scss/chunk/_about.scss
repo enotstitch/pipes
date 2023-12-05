@@ -62,6 +62,7 @@
 	background-color: var(--san-juan-color);
 
 	&__text {
+		@include adaptive-font(30, 20);
 		margin: 0;
 		max-width: 305px;
 		line-height: 126%;

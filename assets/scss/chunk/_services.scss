@@ -14,6 +14,15 @@
 		padding: 25px 35px 95px;
 		max-width: 555px;
 		background-color: var(--san-juan-color);
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
+
+		@media (max-width: 768px) {
+			padding: 40px 30px 45px;
+			max-width: 360px;
+		}
 	}
 
 	&__circle {
@@ -33,11 +42,10 @@
 	}
 
 	&__text {
+		@include adaptive-font(24, 16);
 		margin: 0;
 		font-family: Poppins, sans-serif;
 		font-weight: 400;
-		font-size: 24px;
-		line-height: normal;
 		text-align: center;
 		color: var(--light-color);
 	}

@@ -1,11 +1,6 @@
 .guarantee {
 	&__title {
-		margin: 0;
-		margin-bottom: 165px;
-		font-size: 32px;
-		line-height: 126%;
 		text-align: center;
-		text-transform: uppercase;
 	}
 
 	&__wrap {
@@ -27,6 +22,19 @@
 
 		&:nth-child(even) {
 			flex-direction: row-reverse;
+
+			@media (max-width: 1200px) {
+				flex-direction: column;
+			}
+		}
+
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media (max-width: 576px) {
+			align-items: start;
 		}
 	}
 }
@@ -39,21 +47,37 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@media (max-width: 490px) {
+			width: 357px;
+			height: 209px;
+		}
 	}
 
 	&__content {
 		max-width: 685px;
 	}
 
+	&__inner {
+		@media (max-width: 1200px) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
 	&__icon {
 		margin-bottom: 30px;
 		height: 100px;
+
+		@media (max-width: 490px) {
+			height: 63px;
+		}
 	}
 
 	&__subtitle {
+		@include adaptive-font(24, 20);
 		margin: 0;
 		margin-bottom: 50px;
-		font-size: 24px;
 		line-height: 126%;
 		text-transform: uppercase;
 		color: var(--accent-color);
@@ -62,7 +86,10 @@
 	&__text {
 		margin: 0;
 		font-weight: 500;
-		font-size: 20px;
 		line-height: 126%;
+
+		@media (max-width: 490px) {
+			width: 360px;
+		}
 	}
 }
