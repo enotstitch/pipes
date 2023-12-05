@@ -1,0 +1,47 @@
+.info-projects {
+	&__title {
+		margin: 0;
+		text-align: center;
+	}
+
+	&__crads {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 25px;
+	}
+
+	&__card {
+		border: 1px solid var(--dark-text-color);
+		border-radius: 10px;
+		max-width: 382px;
+		background-color: var(--light-color);
+	}
+
+	&__img {
+		border-radius: 10px 10px 0 0;
+		width: 380px;
+		height: 204px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__subtitle {
+		@include adaptive-font(16, 16);
+		margin: 0;
+		padding-top: 20px;
+		font-weight: 600;
+		color: var(--accent-color);
+	}
+
+	&__text {
+		@include adaptive-font(16, 16);
+		margin: 0;
+		font-weight: 400;
+	}
+
+	&__link {
+		text-decoration: underline;
+	}
+}
