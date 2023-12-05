@@ -13,9 +13,9 @@
 	}
 
 	&__title {
+		@include adaptive-font(32, 16);
 		margin: 0;
 		margin-bottom: 35px;
-		font-size: 32px;
 		line-height: 126%;
 		text-transform: uppercase;
 		color: var(--accent-color);
@@ -36,11 +36,17 @@
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
-		gap: 50px;
+		gap: 30px;
+
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 }
 
 .about-card {
+	@include adaptive-font(26, 20);
 	display: flex;
 	align-items: center;
 	justify-content: end;
@@ -49,9 +55,9 @@
 	width: 100%;
 	min-height: 210px;
 	max-width: 565px;
-	font-size: 30px;
 	color: var(--light-color);
 	background-position: center left 50px;
+	background-size: 100px;
 	background-repeat: no-repeat;
 	background-color: var(--san-juan-color);
 
@@ -59,6 +65,10 @@
 		margin: 0;
 		max-width: 305px;
 		line-height: 126%;
+
+		@media (max-width: 576px) {
+			margin-left: 140px;
+		}
 	}
 
 	&--price {
@@ -67,5 +77,11 @@
 
 	&--grade {
 		background-image: url('@img/about/about-3.svg');
+	}
+
+	@media (max-width: 576px) {
+		padding: 25px;
+		min-height: 130px;
+		background-size: 50px;
 	}
 }
