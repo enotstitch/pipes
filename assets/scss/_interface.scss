@@ -20,6 +20,7 @@
 
 .title {
 	@include adaptive-font(32, 20);
+	position: relative;
 	margin: 0;
 	margin-bottom: 110px;
 	font-family: Montserrat, sans-serif;
@@ -27,6 +28,23 @@
 	line-height: 126%;
 	text-transform: uppercase;
 	color: var(--dark-text-color);
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -25px;
+		width: 450px;
+		height: 4px;
+		background-image: url('@img/underline-part.svg');
+		transform: translateX(-50%);
+	}
+
+	&--no-underline {
+		&::after {
+			display: none;
+		}
+	}
 }
 
 .item {
