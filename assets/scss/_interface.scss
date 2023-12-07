@@ -13,6 +13,14 @@
 		background-repeat: no-repeat;
 	}
 
+	&-calc {
+		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
+			url('@img/cost-calc/cost-calc-bg.jpg');
+		background-position: top center;
+		background-size: 1445px;
+		background-repeat: no-repeat;
+	}
+
 	&--gray-bg {
 		background-color: var(--concrete-color);
 	}
