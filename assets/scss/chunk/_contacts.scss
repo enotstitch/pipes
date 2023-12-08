@@ -41,19 +41,17 @@
 
 	&__icon {
 		flex-shrink: 0;
+		width: 36px;
 
 		&--geo {
-			width: 23px;
 			height: 36px;
 		}
 
 		&--phone {
-			width: 37px;
 			height: 37px;
 		}
 
 		&--mail {
-			width: 36px;
 			height: 29px;
 		}
 	}
