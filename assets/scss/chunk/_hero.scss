@@ -41,6 +41,11 @@
 		@include adaptive-font(40, 24);
 		margin-bottom: 70px;
 		color: var(--light-color);
+
+		&::after {
+			left: 0;
+			transform: none;
+		}
 	}
 
 	&__text {
