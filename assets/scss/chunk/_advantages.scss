@@ -1,4 +1,7 @@
+/* stylelint-disable no-descending-specificity */
 .advantages {
+	counter-reset: num 0;
+
 	&__cards {
 		display: flex;
 		flex-direction: column;
@@ -6,25 +9,114 @@
 	}
 
 	&__card {
+		position: relative;
+		margin-bottom: 60px;
+		border-radius: 20px;
+		padding: 15px;
+		max-width: 890px;
+		color: var(--san-juan-color);
+		background-color: var(--light-color);
+		filter: drop-shadow(0 4px 30px rgb(0 0 0 / 35%));
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -40px;
+			top: 50%;
+			border-radius: 0 18px 18px 0;
+			width: 40px;
+			height: 205px;
+			background-color: var(--san-juan-color);
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(even) {
+			color: var(--accent-color);
+
+			&::after {
+				background-color: var(--accent-color);
+			}
+
+			.advantages__num::before {
+				background: linear-gradient(45deg, #d76b07 50%, #ff9432 50%);
+			}
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: -1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 60px;
 		border-radius: 20px;
-		padding: 55px 45px;
+		padding: 40px;
+		padding-left: 150px;
 		max-width: 890px;
-		background-color: var(--gallery-color);
+		background: linear-gradient(90deg, #efefef 0%, #fff 100%);
+		gap: 100px;
+	}
+
+	&__num {
+		counter-increment: num;
+		position: absolute;
+		left: -130px;
+		border-radius: 50%;
+		width: 220px;
+		height: 220px;
+		font-family: Poppins, sans-serif;
+		font-size: 128px;
+		color: currentcolor;
+		background-color: var(--light-color);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			border-radius: 50%;
+			width: 265px;
+			height: 265px;
+			background: linear-gradient(45deg, #5b90c2 50%, #345472 50%);
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			content: counter(num);
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			transform: translate(50%, -50%);
+		}
 	}
 
 	&__text {
-		@include adaptive-font(24, 20);
+		@include adaptive-font(22, 20);
 		margin: 0;
 		max-width: 565px;
 		font-family: Poppins, sans-serif;
 		font-weight: 400;
+		color: var(--dark-text-color);
 	}
 
 	&__icon {
-		width: 130px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -50px;
+			top: 50%;
+			width: 1px;
+			height: 150px;
+			background-color: var(--dark-text-color);
+			transform: translateY(-50%);
+		}
+
+		svg {
+			flex-shrink: 0;
+			width: 130px;
+		}
 	}
 }
