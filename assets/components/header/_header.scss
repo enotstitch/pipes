@@ -25,6 +25,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+
+		@media (max-width: 768px) {
+			flex-direction: row-reverse;
+			gap: 20px;
+			align-items: center;
+		}
 	}
 
 	&__link {
@@ -41,6 +47,17 @@
 			border-color: var(--accent-color);
 			color: var(--accent-color);
 			background-color: var(--light-color);
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 10px;
 		}
 	}
 
@@ -118,6 +135,10 @@
 		font-size: 16px;
 		color: var(--dark-text-color);
 	}
+
+	@media (max-width: 1200px) {
+		display: none;
+	}
 }
 
 .header-phone {
@@ -172,7 +193,6 @@
 
 	&__link {
 		position: relative;
-		font-size: 24px;
 		color: var(--light-color);
 
 		&::after {
@@ -195,6 +215,10 @@
 				opacity: 1;
 				visibility: visible;
 			}
+		}
+
+		@media (max-width: 768px) {
+			color: var(--dark-text-color);
 		}
 	}
 }
@@ -268,13 +292,13 @@
 	.menu__body {
 		position: fixed;
 		left: -100%;
-		top: 0;
+		bottom: 0;
 		z-index: 10;
 		overflow: auto;
 		padding: 100px 30px 30px;
 		width: 100%;
-		height: 100%;
-		background-color: rgb(0 0 0 / 90%);
+		height: calc(100% - 75px);
+		background-color: var(--light-color);
 		transition: left 0.3s ease 0s;
 
 		&.active {
