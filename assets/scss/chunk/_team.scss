@@ -8,9 +8,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 15px;
+		overflow-x: auto;
 	}
 
 	&__card {
+		flex-shrink: 0;
 		border: 2px solid var(--accent-color);
 		border-radius: 20px;
 		padding-bottom: 25px;

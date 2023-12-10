@@ -1,5 +1,5 @@
 <div class="calc">
-	<div class="calc__header">
+	<div class="calc__header calc__header--desktop">
 		<ul class="calc__list list-reset">
 			<li class="calc__item">
 				Покраска сооружений
@@ -12,4 +12,75 @@
 			</li>
 		</ul>
 	</div>
+	<div class="calc__header calc__header--mobile select">
+		@include('../select/select.html')
+	</div>
+	<form class="calc__form calc-form" action="#">
+		<div class="calc-form__control">
+			<div class="calc-form__square calc-form__inner calc-square">
+				<span class="calc-square__text">
+					Кол-во квадратных метров
+				</span>
+				<div class="calc-square__inner">
+					<button class="calc-square__button btn-reset" type="button" data-plus-btn="">+</button>
+					<input class="calc-square__input" type="tel" name="square" id="calc-square" value="0">
+					<button class="calc-square__button btn-reset" type="button" data-minus-btn="">-</button>
+				</div>
+			</div>
+			<div class="calc-form__unit calc-form__inner calc-unit">
+				<span class="calc-unit__text">
+					Кол-во квадратных метров
+				</span>
+				<span class="calc-unit__value">
+					120
+				</span>
+			</div>
+		</div>
+		<div class="calc-form__body">
+			<div class="calc-form__info">
+				<div class="calc-form__price calc-price">
+					<button class="calc-form__button calc-price__button button btn-reset" type="button">Рассчитать</button>
+					<span class="calc-price__value">
+						Стоимость: <span class="calc-price__value calc-price__value--accent-color" data-price-value="">0</span> руб.
+					</span>
+				</div>
+				<p class="calc-form__text">
+					* Обращаем ваше внимание, что стоимость может меняться от особенностей заказа. Окончательная цена будет
+					озвучена нашим
+					менеджером после согласования всех условий.
+				</p>
+			</div>
+			<div class="calc-form__data calc-data">
+				<div class="calc-data__items">
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="text" placeholder="Ваше имя">
+					</label>
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="email" placeholder="Email">
+					</label>
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="tel" placeholder="Номер телефона">
+					</label>
+					<label class="calc-data__item policy checkbox">
+						<input class="checkbox__real" type="checkbox">
+						<span class="checkbox__fake"></span>
+						<span class="calc-data__text">Согласен на обработку персональных данных</span>
+					</label>
+
+					<!-- <label class="policy-label checkbox">
+						<input class="checkbox__real politikal" type="checkbox">
+						<span class="checkbox__fake"></span>
+						<span class="policy-label__text">
+							Согласен(на) на обработку персональных данных в соответствии с <a class="policy-label__link link-reset"
+								href="politikal.html">Политикой
+								конфиденциальности</a>
+						</span>
+					</label> -->
+
+				</div>
+				<button class="calc-form__button calc-data__button button btn-reset" type="button">Сделать заказ по
+					рассчету</button>
+			</div>
+		</div>
+	</form>
 </div>

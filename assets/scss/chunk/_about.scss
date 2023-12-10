@@ -7,15 +7,45 @@
 		gap: 45px;
 	}
 
+	&__row {
+		display: flex;
+		align-items: center;
+		margin-bottom: 35px;
+		gap: 20px;
+
+		@media (max-width: 480px) {
+			gap: 15px;
+			margin-bottom: 20px;
+		}
+	}
+
 	&__img {
 		height: auto;
 		max-width: 278px;
+
+		&--mobile {
+			display: none;
+			max-width: 150px;
+
+			@media (max-width: 768px) {
+				display: inline-block;
+			}
+
+			@media (max-width: 480px) {
+				max-width: 50px;
+			}
+		}
+
+		&--desktop {
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
 	}
 
 	&__title {
 		@include adaptive-font(32, 16);
 		margin: 0;
-		margin-bottom: 35px;
 		line-height: 126%;
 		text-transform: uppercase;
 		color: var(--accent-color);
