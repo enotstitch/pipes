@@ -5,9 +5,10 @@
 
 	&__wrap {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: end;
 		justify-content: space-between;
-		gap: 90px;
+		gap: 40px;
 	}
 
 	&__map {
@@ -16,49 +17,5 @@
 		width: 100%;
 		min-height: 380px;
 		max-width: 600px;
-	}
-}
-
-.connection {
-	@include adaptive-font(24, 16);
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	font-family: Poppins, sans-serif;
-	font-weight: 700;
-	gap: 25px;
-
-	&__item {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-
-		&:first-child {
-			align-items: start;
-			margin-bottom: 25px;
-		}
-	}
-
-	&__icon {
-		flex-shrink: 0;
-		width: 36px;
-		fill: var(--dark-text-color);
-
-		&--geo {
-			height: 36px;
-		}
-
-		&--phone {
-			height: 37px;
-		}
-
-		&--mail {
-			height: 29px;
-		}
-	}
-
-	&__address {
-		font-weight: 400;
-		font-style: normal;
 	}
 }
