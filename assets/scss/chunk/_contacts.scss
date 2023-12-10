@@ -5,9 +5,10 @@
 
 	&__wrap {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: end;
 		justify-content: space-between;
-		gap: 90px;
+		gap: 40px;
 	}
 
 	&__map {
