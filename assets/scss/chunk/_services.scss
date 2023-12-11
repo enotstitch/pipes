@@ -1,8 +1,9 @@
 .services {
 	&__cards {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		gap: 15px;
 	}
 
@@ -34,6 +35,10 @@
 		min-width: 125px;
 		min-height: 125px;
 		background-color: var(--light-color);
+
+		@media (max-width: 992px) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__icon {
@@ -46,6 +51,7 @@
 		margin: 0;
 		font-family: Poppins, sans-serif;
 		font-weight: 400;
+		line-height: 126%;
 		text-align: center;
 		color: var(--light-color);
 	}

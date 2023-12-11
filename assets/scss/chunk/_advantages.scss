@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 .advantages {
 	counter-reset: num 0;
+	padding-top: 200px;
 
 	&__cards {
 		display: flex;
@@ -28,6 +29,21 @@
 			height: 205px;
 			background-color: var(--san-juan-color);
 			transform: translateY(-50%);
+
+			@media (max-width: 1200px) {
+				right: 50%;
+				top: unset;
+				bottom: -40px;
+				border-radius: 0 0 18px 18px;
+				width: 205px;
+				height: 40px;
+				transform: unset;
+				transform: translateX(50%);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 
 		&:nth-child(even) {
@@ -40,6 +56,10 @@
 			.advantages__num::before {
 				background: linear-gradient(45deg, #d76b07 50%, #ff9432 50%);
 			}
+		}
+
+		@media (max-width: 1200px) {
+			margin-bottom: 250px;
 		}
 	}
 
@@ -55,19 +75,24 @@
 		max-width: 890px;
 		background: linear-gradient(90deg, #efefef 0%, #fff 100%);
 		gap: 100px;
+
+		@media (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+			padding: 8px 20px;
+			padding-top: 100px;
+		}
 	}
 
 	&__num {
+		@include adaptive-font(128, 96);
 		counter-increment: num;
 		position: absolute;
-		left: -130px;
-		border-radius: 50%;
+		left: -15%;
 		width: 220px;
 		height: 220px;
 		font-family: Poppins, sans-serif;
-		font-size: 128px;
 		color: currentcolor;
-		background-color: var(--light-color);
 
 		&::before {
 			content: '';
@@ -87,7 +112,21 @@
 			position: absolute;
 			right: 50%;
 			top: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 220px;
+			height: 220px;
+			background-color: var(--light-color);
 			transform: translate(50%, -50%);
+		}
+
+		@media (max-width: 1200px) {
+			left: 50%;
+			top: -200px;
+			width: 200px 200px;
+			transform: translate(-50%, 15%);
 		}
 	}
 
@@ -112,6 +151,14 @@
 			height: 150px;
 			background-color: var(--dark-text-color);
 			transform: translateY(-50%);
+
+			@media (max-width: 1200px) {
+				left: 50%;
+				top: -20px;
+				width: 150px;
+				height: 1px;
+				transform: translateX(-50%);
+			}
 		}
 
 		svg {
