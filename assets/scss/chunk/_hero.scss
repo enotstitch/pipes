@@ -5,8 +5,14 @@
 
 	&__cards {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+			justify-content: space-around;
+		}
 	}
 
 	&__card {
@@ -16,11 +22,6 @@
 		justify-content: center;
 		gap: 25px;
 		max-width: 200px;
-	}
-
-	&__icon {
-		width: 40px;
-		height: 52px;
 	}
 
 	&__text {
@@ -61,11 +62,18 @@
 	&__icon {
 		width: 40px;
 		height: 52px;
+
+		@media (max-width: 576px) {
+			width: 20px;
+			height: 26px;
+		}
 	}
 
 	&__text {
 		margin: 0;
+		max-width: 150px;
 		font-weight: 500;
+		font-size: 16px;
 		text-align: center;
 		text-transform: lowercase;
 		color: var(--light-color);
