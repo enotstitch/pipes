@@ -77,6 +77,10 @@
 	font-weight: 500;
 	background-position: top left;
 	background-repeat: no-repeat;
+
+	@media (min-width: 1200px) {
+		font-size: 24px;
+	}
 }
 
 .input {
@@ -138,7 +142,6 @@
 }
 
 .connection {
-	@include adaptive-font(24, 16);
 	display: flex;
 	flex-direction: column;
 	align-items: start;
