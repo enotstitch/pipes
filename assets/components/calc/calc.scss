@@ -109,7 +109,7 @@
 	}
 
 	&__button {
-		@include adaptive-font(24, 16);
+		@include adaptive-font(19, 16);
 		border: 1px solid transparent;
 		border-radius: 50px;
 		padding: 20px 55px;
@@ -130,7 +130,6 @@
 	}
 
 	&__text {
-		@include adaptive-font(20, 14);
 		margin: 0;
 		max-width: 475px;
 		font-weight: 400;
