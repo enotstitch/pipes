@@ -101,6 +101,7 @@
 	color: var(--light-color);
 	background-color: var(--accent-color);
 	transition: all 0.2s;
+	cursor: pointer;
 
 	&:hover {
 		border-color: var(--accent-color);
@@ -118,6 +119,7 @@
 	color: var(--light-color);
 	background-color: var(--accent-color);
 	transition: all 0.2s;
+	cursor: pointer;
 
 	&:hover {
 		border-color: var(--accent-color);
