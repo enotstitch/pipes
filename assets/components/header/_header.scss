@@ -38,21 +38,6 @@
 	}
 
 	&__link {
-		@include adaptive-font(20, 16);
-		border: 1px solid transparent;
-		border-radius: 20px;
-		padding: 20px 55px;
-		font-weight: inherit;
-		color: var(--light-color);
-		background-color: var(--accent-color);
-		transition: all 0.2s;
-
-		&:hover {
-			border-color: var(--accent-color);
-			color: var(--accent-color);
-			background-color: var(--light-color);
-		}
-
 		@media (max-width: 576px) {
 			padding: 5px 8px;
 		}
