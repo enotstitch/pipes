@@ -21,6 +21,17 @@
 		background-repeat: no-repeat;
 	}
 
+	&-consultation {
+		padding-top: 50px;
+		padding-bottom: 20px;
+		min-height: 600px;
+		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
+			url('@img/consultation/consultation-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	&--gray-bg {
 		background-color: var(--concrete-color);
 	}
