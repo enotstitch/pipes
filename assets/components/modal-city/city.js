@@ -22,14 +22,17 @@ modalSearch.addEventListener('input', function () {
 	}
 });
 
-let cityListWidth = cityList.offsetWidth;
-
 slideBtnNext.addEventListener('click', () => {
-	cityList.scrollLeft += cityListWidth;
+	const listItem = document.querySelector('.city-list__item');
+	let listItemWidth = listItem.offsetWidth;
+
+	cityList.scrollLeft += listItemWidth;
 });
 
 slideBtnPrev.addEventListener('click', () => {
-	cityList.scrollLeft += -cityListWidth;
+	const listItem = document.querySelector('.city-list__item');
+	let listItemWidth = listItem.offsetWidth;
+	cityList.scrollLeft += -listItemWidth;
 });
 
 const createCityItem = (cityName, cityLink = '#') => {
