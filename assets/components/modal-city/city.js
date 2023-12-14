@@ -15,13 +15,13 @@ let cityDataSorted = cityData.sort((a, b) => {
 	return 0;
 });
 
-modalSearch.addEventListener('input', function (e) {
+modalSearch.addEventListener('input', function () {
 	let listSearch = document.querySelectorAll('.city-list__item');
-	let currentValue = this.value.trim();
+	let currentValue = this.value.trim().toLowerCase();
 
 	if (currentValue) {
 		listSearch.forEach((listItem) => {
-			let listItemText = listItem.textContent.trim();
+			let listItemText = listItem.textContent.trim().toLowerCase();
 
 			if (!listItemText.includes(currentValue)) {
 				listItem.classList.add('city-list__item--hide');
@@ -42,13 +42,14 @@ slideBtnNext.addEventListener('click', () => {
 	const listItem = document.querySelector('.city-list__item');
 	let listItemWidth = listItem.offsetWidth;
 
-	cityList.scrollLeft += listItemWidth;
+	cityList.scrollLeft += listItemWidth * 4;
 });
 
 slideBtnPrev.addEventListener('click', () => {
 	const listItem = document.querySelector('.city-list__item');
 	let listItemWidth = listItem.offsetWidth;
-	cityList.scrollLeft += -listItemWidth;
+
+	cityList.scrollLeft += -listItemWidth * 4;
 });
 
 const createCityItem = (cityName, cityLink = '#') => {
