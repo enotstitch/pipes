@@ -58,26 +58,3 @@ const renderCity = () => {
 };
 
 renderCity();
-
-// ! Поиск в селектах
-// const inputsSearch = document.querySelectorAll('.calendar-search__input');
-// inputsSearch.forEach((inputSearch) => {
-//   inputSearch.addEventListener('input', function () {
-//     let listSearch = document.querySelectorAll('.select__item');
-//     let currentValue = this.value.trim();
-
-//     if (currentValue) {
-//       console.log(currentValue);
-//       listSearch.forEach((listItem) => {
-//         if (listItem.innerText.search(currentValue) == -1) {
-//           listItem.classList.add('select__item--hide');
-//         }
-//       });
-//     } else {
-//       listSearch.forEach((listItem) => {
-//         listItem.classList.remove('select__item--hide');
-//       });
-//     }
-//   });
-// });
-// ! Поиск
