@@ -119,6 +119,17 @@
 		color: var(--accent-color);
 		background-color: transparent;
 	}
+
+	&[disabled] {
+		filter: brightness(85%);
+		cursor: not-allowed;
+
+		&:hover {
+			border-color: var(--accent-color);
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
 }
 
 .link {
