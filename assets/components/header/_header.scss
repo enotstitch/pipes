@@ -40,24 +40,6 @@
 
 	&__link {
 		@include adaptive-font(20, 15);
-		border: 1px solid transparent;
-		border-radius: 20px;
-		padding: 20px 55px;
-		font-weight: inherit;
-		color: var(--light-color);
-		background-color: var(--accent-color);
-		transition: all 0.2s;
-
-		&:hover {
-			border-color: var(--accent-color);
-			color: var(--accent-color);
-			background-color: var(--light-color);
-		}
-
-		@media (max-width: 768px) {
-			padding: 15px 40px;
-		}
-
 		@media (max-width: 576px) {
 			padding: 5px 8px;
 		}
@@ -292,22 +274,35 @@
 	.menu__item {
 		padding: 10px 0;
 	}
+
+	.menu__burger {
+		display: none;
+	}
 }
 
 @media (max-width: 767px) {
 	.menu__burger {
-		position: relative;
 		z-index: 15;
 		display: block;
-		width: 25px;
-		height: 16px;
+		display: flex;
+		align-items: center;
 		cursor: pointer;
+		gap: 10px;
 	}
 
 	.burger {
+		&__inner {
+			position: relative;
+			z-index: 15;
+			display: block;
+			width: 25px;
+			height: 16px;
+			cursor: pointer;
+		}
+
 		&__line,
-		&::before,
-		&::after {
+		&__inner::before,
+		&__inner::after {
 			position: absolute;
 			left: 0;
 			width: 100%;
@@ -316,21 +311,20 @@
 			transition: all 0.3s ease 0s;
 		}
 
-		&::before,
-		&::after {
+		&__inner::before,
+		&__inner::after {
 			content: '';
 		}
 
-		&::before {
+		&__inner::before {
 			top: 0;
 		}
 
-		&::after {
+		&__inner::after {
 			bottom: 0;
 		}
 
 		&__text {
-			padding-left: 35px;
 			font-family: Poppins, sans-serif;
 			font-weight: 700;
 			font-size: 16px;
@@ -338,21 +332,21 @@
 			color: var(--light-color);
 		}
 
-		& span {
+		&__line {
 			top: 50%;
 			transform: scale(1) translate(0, -50%);
 		}
 
-		&.active span {
+		&.active &__line {
 			transform: scale(0) translate(0, -50%);
 		}
 
-		&.active::before {
+		&.active &__inner::before {
 			top: 50%;
 			transform: rotate(-45deg) translate(0, -50%);
 		}
 
-		&.active::after {
+		&.active &__inner::after {
 			bottom: 50%;
 			transform: rotate(45deg) translate(0, 50%);
 		}

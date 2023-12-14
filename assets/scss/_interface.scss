@@ -21,6 +21,17 @@
 		background-repeat: no-repeat;
 	}
 
+	&-consultation {
+		padding-top: 50px;
+		padding-bottom: 20px;
+		min-height: 600px;
+		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
+			url('@img/consultation/consultation-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	&--gray-bg {
 		background-color: var(--concrete-color);
 	}
@@ -90,6 +101,53 @@
 	box-sizing: border-box;
 	background-color: var(--light-color);
 	cursor: text;
+}
+
+.button {
+	@include adaptive-font(19, 16);
+	border: 2px solid transparent;
+	border-radius: 50px;
+	padding: 20px 55px;
+	font-weight: inherit;
+	color: var(--light-color);
+	background-color: var(--accent-color);
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--accent-color);
+		color: var(--accent-color);
+		background-color: transparent;
+	}
+
+	&[disabled] {
+		filter: brightness(85%);
+		cursor: not-allowed;
+
+		&:hover {
+			border-color: var(--accent-color);
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
+}
+
+.link {
+	@include adaptive-font(19, 16);
+	border: 2px solid transparent;
+	border-radius: 50px;
+	padding: 20px 55px;
+	font-weight: inherit;
+	color: var(--light-color);
+	background-color: var(--accent-color);
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--accent-color);
+		color: var(--accent-color);
+		background-color: transparent;
+	}
 }
 
 .policy {
@@ -233,13 +291,7 @@
 	}
 
 	&__btn {
-		border-radius: 50px;
 		padding: 10px 25px;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 126%;
-		color: var(--light-color);
-		background-color: var(--accent-color);
 	}
 
 	&:last-child {

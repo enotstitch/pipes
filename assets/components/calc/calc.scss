@@ -109,21 +109,6 @@
 	}
 
 	&__button {
-		@include adaptive-font(19, 16);
-		border: 1px solid transparent;
-		border-radius: 50px;
-		padding: 20px 55px;
-		font-weight: inherit;
-		color: var(--light-color);
-		background-color: var(--accent-color);
-		transition: all 0.2s;
-
-		&:hover {
-			border-color: var(--accent-color);
-			color: var(--accent-color);
-			background-color: transparent;
-		}
-
 		@media (max-width: 576px) {
 			width: 100%;
 		}
