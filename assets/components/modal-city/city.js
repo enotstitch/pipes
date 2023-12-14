@@ -18,12 +18,17 @@ let cityDataSorted = cityData.sort((a, b) => {
 modalSearch.addEventListener('input', function (e) {
 	let listSearch = document.querySelectorAll('.city-list__item');
 	let currentValue = this.value.trim();
-	console.log(e);
 
 	if (currentValue) {
 		listSearch.forEach((listItem) => {
-			if (listItem.innerText.search(currentValue) == -1) {
+			let listItemText = listItem.textContent.trim();
+
+			if (!listItemText.includes(currentValue)) {
 				listItem.classList.add('city-list__item--hide');
+			}
+
+			if (listItemText.includes(currentValue)) {
+				listItem.classList.remove('city-list__item--hide');
 			}
 		});
 	} else {
