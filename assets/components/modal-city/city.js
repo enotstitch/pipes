@@ -6,10 +6,10 @@ const slideBtnNext = document.querySelector('.modal-slides__btn--next');
 const modalSearch = document.querySelector('.modal__search');
 
 let cityDataSorted = cityData.sort((a, b) => {
-	if (a.name < b.name) {
+	if (a.name.toLowerCase() < b.name.toLowerCase()) {
 		return -1;
 	}
-	if (a.name > b.name) {
+	if (a.name.toLowerCase() > b.name.toLowerCase()) {
 		return 1;
 	}
 	return 0;
@@ -19,9 +19,9 @@ modalSearch.addEventListener('input', function () {
 	let listSearch = document.querySelectorAll('.city-list__item');
 	let currentValue = this.value.trim();
 
-	if (currentValue) {
+	if (currentValue.toLowerCase()) {
 		listSearch.forEach((listItem) => {
-			if (listItem.innerText.search(currentValue) == -1) {
+			if (listItem.innerText.search(currentValue.toLowerCase()) == -1) {
 				listItem.classList.add('city-list__item--hide');
 			}
 		});
