@@ -5,6 +5,16 @@ const slideBtnPrev = document.querySelector('.modal-slides__btn--prev');
 const slideBtnNext = document.querySelector('.modal-slides__btn--next');
 const modalSearch = document.querySelector('.modal__search');
 
+let cityDataSorted = cityData.sort((a, b) => {
+	if (a.name < b.name) {
+		return -1;
+	}
+	if (a.name > b.name) {
+		return 1;
+	}
+	return 0;
+});
+
 modalSearch.addEventListener('input', function () {
 	let listSearch = document.querySelectorAll('.city-list__item');
 	let currentValue = this.value.trim();
@@ -50,9 +60,8 @@ const createCityItem = (cityName, cityLink = '#') => {
 
 const renderCity = () => {
 	cityList.innerHTML = '';
-	console.log(cityList.clientWidth);
 
-	cityData.forEach((cityItem) => {
+	cityDataSorted.forEach((cityItem) => {
 		createCityItem(cityItem.name, cityItem.link);
 	});
 };
