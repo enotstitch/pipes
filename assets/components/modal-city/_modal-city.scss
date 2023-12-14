@@ -61,6 +61,7 @@
 		padding: 20px 30px;
 		width: 100%;
 		box-sizing: border-box;
+		font-weight: 400;
 		text-align: start;
 		background-color: #f3f3f3;
 		cursor: text;
@@ -81,6 +82,12 @@
 .close-modal__icon {
 	width: 23px;
 	height: 23px;
+	fill: var(--dark-text-color);
+	transition: fill 0.3s;
+
+	&:hover {
+		fill: var(--accent-color);
+	}
 }
 
 .modal-slides {
