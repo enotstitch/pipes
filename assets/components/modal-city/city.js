@@ -15,13 +15,14 @@ let cityDataSorted = cityData.sort((a, b) => {
 	return 0;
 });
 
-modalSearch.addEventListener('input', function () {
+modalSearch.addEventListener('input', function (e) {
 	let listSearch = document.querySelectorAll('.city-list__item');
 	let currentValue = this.value.trim();
+	console.log(e);
 
-	if (currentValue.toLowerCase()) {
+	if (currentValue) {
 		listSearch.forEach((listItem) => {
-			if (listItem.innerText.search(currentValue.toLowerCase()) == -1) {
+			if (listItem.innerText.search(currentValue) == -1) {
 				listItem.classList.add('city-list__item--hide');
 			}
 		});
