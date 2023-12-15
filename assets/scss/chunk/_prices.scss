@@ -3,6 +3,12 @@
 		text-align: center;
 	}
 
+	.price__row {
+		&:last-child {
+			border-bottom: 1px solid var(--accent-color);
+		}
+	}
+
 	.spollers__icon {
 		&::before,
 		&::after {
