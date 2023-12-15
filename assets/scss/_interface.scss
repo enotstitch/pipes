@@ -269,7 +269,7 @@
 	gap: 20px;
 
 	&__text {
-		@include adaptive-font(20, 14);
+		@include adaptive-font(18, 14);
 		margin: 0;
 		font-weight: 500;
 	}
@@ -331,6 +331,7 @@
 	&__icon {
 		width: 20px;
 		height: 19px;
+		fill: var(--accent-color);
 	}
 
 	&__link {

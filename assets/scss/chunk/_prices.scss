@@ -2,4 +2,18 @@
 	&__title {
 		text-align: center;
 	}
+
+	.spollers__icon {
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		&-question {
+			width: 40px;
+			height: 40px;
+			fill: var(--dark-text-color);
+			rotate: 90deg;
+		}
+	}
 }
