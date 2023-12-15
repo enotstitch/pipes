@@ -1,7 +1,7 @@
+/* stylelint-disable no-descending-specificity */
 .spollers {
 	&__item {
 		margin-bottom: 10px;
-		background-color: $black;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -9,41 +9,83 @@
 	}
 
 	&__title {
-		@include adaptive-font(18, 16);
+		@include adaptive-font(22, 16);
 		position: relative;
-		padding: 10px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+		border-radius: 20px;
+		padding: 30px 40px;
 		width: 100%;
+		font-weight: 700;
 		text-align: left;
-		color: $white;
+		text-transform: uppercase;
+		color: var(--dark-text-color);
+		background-color: var(--light-color);
+		transition: all 0.3s;
+		gap: 30px;
+	}
+
+	&__title.active {
+		color: var(--light-color);
+		background-color: var(--accent-color);
+
+		.spollers__icon::before,
+		.spollers__icon::after {
+			background-color: var(--light-color);
+		}
+
+		.spollers__icon::after {
+			transform: translateX(50%) rotate(90deg);
+		}
+
+		.spollers__icon-question {
+			fill: var(--light-color);
+		}
 	}
 
 	&__text {
-		padding: 0 10px 10px;
-		line-height: 130%;
-		color: $white;
+		@include adaptive-font(18, 16);
+		padding: 30px;
+		padding-top: 0;
+		font-weight: 500;
+		line-height: 126%;
 	}
 
-	&.init .spollers__title {
-		padding: 10px 40px 10px 10px;
-	}
-
-	&.init .spollers__title::before,
-	&.init .spollers__title::after {
-		content: '';
+	&__icon {
 		position: absolute;
-		right: 10px;
-		top: 20px;
-		width: 20px;
-		height: 2px;
-		background-color: $white;
-		transition: transform 0.3s ease 0s;
-	}
+		right: 40px;
+		top: 50%;
+		width: 50px;
+		height: 50px;
+		transform: translateY(-50%);
 
-	&.init .spollers__title::after {
-		transform: rotate(-90deg);
-	}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background-color: var(--accent-color);
+			transition: transform 0.3s ease 0s;
+		}
 
-	&.init .spollers__title.active::after {
-		transform: rotate(0deg);
+		&::before {
+			top: 50%;
+			width: 100%;
+			height: 7px;
+			transform: translateY(-50%);
+		}
+
+		&::after {
+			right: 50%;
+			width: 7px;
+			height: 100%;
+			transform: translateX(50%);
+		}
+
+		&-question {
+			width: 40px;
+			height: 40px;
+			fill: var(--accent-color);
+		}
 	}
 }
