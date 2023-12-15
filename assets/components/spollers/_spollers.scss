@@ -13,7 +13,6 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		margin-bottom: 30px;
 		border-radius: 20px;
 		padding: 30px 40px;
 		width: 100%;
@@ -47,7 +46,6 @@
 	&__text {
 		@include adaptive-font(18, 16);
 		padding: 30px;
-		padding-top: 0;
 		font-weight: 500;
 		line-height: 126%;
 	}
