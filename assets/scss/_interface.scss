@@ -13,6 +13,17 @@
 		background-repeat: no-repeat;
 	}
 
+	&-application {
+		padding-top: 50px;
+		padding-bottom: 30px;
+		min-height: 580px;
+		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
+			url('@img/application/application-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	&-calc {
 		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
 			url('@img/cost-calc/cost-calc-bg.jpg');
