@@ -47,6 +47,10 @@
 		.spollers__icon-question {
 			fill: var(--light-color);
 		}
+
+		.spollers__icon--arrow {
+			fill: var(--light-color);
+		}
 	}
 
 	&__text {
@@ -77,6 +81,9 @@
 			width: 100%;
 			height: 7px;
 			transform: translateY(-50%);
+			@media (max-width: 768px) {
+				height: 4px;
+			}
 		}
 
 		&::after {
@@ -84,12 +91,19 @@
 			width: 7px;
 			height: 100%;
 			transform: translateX(50%);
+			@media (max-width: 768px) {
+				width: 4px;
+			}
 		}
 
 		&-question {
 			width: 40px;
 			height: 40px;
 			fill: var(--accent-color);
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
 
 		@media (max-width: 768px) {
