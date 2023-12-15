@@ -8,6 +8,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 25px;
+		margin-bottom: 75px;
 	}
 
 	&__card {
@@ -15,6 +16,10 @@
 		border-radius: 10px;
 		max-width: 382px;
 		background-color: var(--light-color);
+
+		&.hidden {
+			display: none;
+		}
 
 		@media (max-width: 490px) {
 			flex-direction: column;

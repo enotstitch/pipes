@@ -395,3 +395,29 @@
 		}
 	}
 }
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: fit-content;
+	gap: 5px;
+
+	&__button {
+		border-radius: 5px;
+		padding: 3px 15px;
+		min-width: 45px;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 126%;
+		text-align: center;
+		color: var(--accent-color);
+		transition: all 0.2s;
+
+		&.active {
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
+}
