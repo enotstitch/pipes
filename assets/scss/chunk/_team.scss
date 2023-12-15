@@ -3,12 +3,8 @@
 		text-align: center;
 	}
 
-	&__cards {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 15px;
-		overflow-x: auto;
+	&__wrapper {
+		position: relative;
 	}
 
 	&__card {

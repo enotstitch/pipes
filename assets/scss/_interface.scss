@@ -352,3 +352,46 @@
 		}
 	}
 }
+
+.slider {
+	position: relative;
+
+	&-button {
+		position: absolute;
+		top: 50%;
+		z-index: 15;
+		transform: translateY(-50%);
+
+		&--prev {
+			left: -50px;
+			@media (max-width: 1400px) {
+				left: calc(50% - 35px);
+				transform: translateX(-50%);
+			}
+		}
+
+		&--next {
+			right: -50px;
+
+			@media (max-width: 1400px) {
+				right: calc(50% - 35px);
+				transform: translateX(50%);
+			}
+		}
+
+		@media (max-width: 1400px) {
+			top: unset;
+			bottom: -85px;
+		}
+	}
+
+	&-icon {
+		width: 45px;
+		height: 45px;
+		cursor: pointer;
+
+		use {
+			fill: var(--accent-color);
+		}
+	}
+}

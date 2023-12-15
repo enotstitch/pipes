@@ -10,8 +10,9 @@
 // @import "libs/animate";
 
 // * Подключение стилей swiper-слайдера
-// @import "libs/swiper-bundle.min";
+// @import 'swiper/css/bundle';
 // @import "components/sliders";
+@import '../../node_modules/swiper/swiper-bundle.min';
 
 // * Main styles
 @import '../components/header/header';
