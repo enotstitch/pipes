@@ -38,6 +38,14 @@
 			text-transform: uppercase;
 		}
 
+		&__link {
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: brightness(75%);
+			}
+		}
+
 		&:last-child {
 			margin: 0;
 		}
@@ -46,6 +54,11 @@
 	&__policy {
 		@include adaptive-font(16, 16);
 		color: var(--alto-color);
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: brightness(140%);
+		}
 	}
 
 	&__copyright {

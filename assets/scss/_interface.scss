@@ -210,6 +210,14 @@
 		flex-direction: column;
 		align-items: start;
 		gap: 25px;
+
+		a {
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: brightness(75%);
+			}
+		}
 	}
 
 	&__item {
