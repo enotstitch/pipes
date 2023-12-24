@@ -4,4 +4,6 @@ import { select } from '../components/select/select';
 import { modal } from '../components/modal/modal';
 import { city } from '../components/modal-city/city';
 // import { checkPolicy } from './functions/checkPolicy';
+import { swiper } from './functions/swiper-init';
+// import { pagination } from './functions/pagination';
 import { spollers } from '../components/spollers/spollers';

@@ -44,10 +44,7 @@
 	}
 
 	&__title {
-		@include adaptive-font(32, 16);
 		margin: 0;
-		line-height: 126%;
-		text-transform: uppercase;
 		color: var(--accent-color);
 	}
 
@@ -107,6 +104,10 @@
 
 	&--grade {
 		background-image: url('@img/about/about-3.svg');
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 26px;
 	}
 
 	@media (max-width: 576px) {

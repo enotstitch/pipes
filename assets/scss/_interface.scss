@@ -13,6 +13,17 @@
 		background-repeat: no-repeat;
 	}
 
+	&-application {
+		padding-top: 50px;
+		padding-bottom: 30px;
+		min-height: 580px;
+		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
+			url('@img/application/application-bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	&-calc {
 		background: linear-gradient(90deg, var(--gradient-color) 30.98%, rgb(30 30 30 / 0%) 99.81%),
 			url('@img/cost-calc/cost-calc-bg.jpg');
@@ -70,6 +81,10 @@
 		&::after {
 			display: none;
 		}
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 34px;
 	}
 
 	@media (max-width: 1200px) {
@@ -346,6 +361,75 @@
 
 		&:hover {
 			color: var(--accent-color);
+		}
+	}
+}
+
+.slider {
+	position: relative;
+
+	&-button {
+		position: absolute;
+		top: 50%;
+		z-index: 15;
+		transform: translateY(-50%);
+
+		&--prev {
+			left: -50px;
+			@media (max-width: 1400px) {
+				left: calc(50% - 35px);
+				transform: translateX(-50%);
+			}
+		}
+
+		&--next {
+			right: -50px;
+
+			@media (max-width: 1400px) {
+				right: calc(50% - 35px);
+				transform: translateX(50%);
+			}
+		}
+
+		@media (max-width: 1400px) {
+			top: unset;
+			bottom: -85px;
+		}
+	}
+
+	&-icon {
+		width: 45px;
+		height: 45px;
+		cursor: pointer;
+
+		use {
+			fill: var(--accent-color);
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: fit-content;
+	gap: 5px;
+
+	&__button {
+		border-radius: 5px;
+		padding: 3px 15px;
+		min-width: 45px;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 126%;
+		text-align: center;
+		color: var(--accent-color);
+		transition: all 0.2s;
+
+		&.active {
+			color: var(--light-color);
+			background-color: var(--accent-color);
 		}
 	}
 }

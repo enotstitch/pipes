@@ -2,18 +2,35 @@
 	<div class="calc__header calc__header--desktop">
 		<ul class="calc__list list-reset">
 			<li class="calc__item">
-				Покраска сооружений
+				<button class="calc__button btn-reset" data-cost="120">
+					Покраска сооружений
+				</button>
 			</li>
 			<li class="calc__item">
-				Ремонт сооружений
+				<button class="calc__button btn-reset" data-cost="130">
+					Ремонт сооружений
+				</button>
 			</li>
 			<li class="calc__item">
-				Очистка крыши от снега
+				<button class="calc__button btn-reset" data-cost="140">
+					Очистка крыши от снега
+				</button>
 			</li>
 		</ul>
 	</div>
-	<div class="calc__header calc__header--mobile select">
-		@include('../select/select.html')
+	<div class="calc__header calc__header--mobile select calc-select">
+		<div class="calc-select__header select__header">
+			<span class="calc-select__current select__current">Покраска сооружений</span>
+			<svg class="calc-select__icon">
+				<use href="img/icons/sprite.svg#arrow"></use>
+			</svg>
+		</div>
+
+		<div class="calc-select__body">
+			<div class="calc-select__item select__item calc__button" data-cost="120">Покраска сооружений</div>
+			<div class="calc-select__item select__item calc__button" data-cost="130">Ремонт сооружений</div>
+			<div class="calc-select__item select__item calc__button" data-cost="140">Очистка крыши от снега</div>
+		</div>
 	</div>
 	<form class="calc__form calc-form" action="#">
 		<div class="calc-form__control">
@@ -29,7 +46,7 @@
 			</div>
 			<div class="calc-form__unit calc-form__inner calc-unit">
 				<span class="calc-unit__text">
-					Кол-во квадратных метров
+					Стоимость 1 кватратного метра в рублях
 				</span>
 				<span class="calc-unit__value">
 					120

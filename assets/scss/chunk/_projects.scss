@@ -3,23 +3,20 @@
 		text-align: center;
 	}
 
-	&__cards {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 15px;
-		overflow-x: auto;
+	&__inner {
+		position: relative;
 	}
 
 	&__card {
+		margin: 0 auto;
 		border: 2px solid var(--accent-color);
 		border-radius: 20px;
+		min-height: 535px;
 		max-width: 350px;
 	}
 
 	&__img {
 		border-radius: 20px 20px 0 0;
-		width: 346px;
 		height: 330px;
 		background-position: center;
 		background-size: cover;

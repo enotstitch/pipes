@@ -1,4 +1,4 @@
-.select {
+.calc-select {
 	position: relative;
 	width: 100%;
 
@@ -6,6 +6,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 		cursor: pointer;
 	}
 
@@ -31,7 +32,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 120%;
+		top: 80%;
 		display: none;
 		overflow: hidden;
 		border: 1px solid var(--accent-color);
@@ -53,11 +54,11 @@
 	}
 
 	&.is-active {
-		.select__body {
+		.calc-select__body {
 			display: block;
 		}
 
-		.select__icon {
+		.calc-select__icon {
 			transform: rotate(180deg);
 		}
 	}
