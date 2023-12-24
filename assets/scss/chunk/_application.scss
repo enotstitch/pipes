@@ -18,6 +18,7 @@
 
 	&__inner {
 		display: grid;
+		align-items: center;
 		grid-template-columns: 530px 530px;
 		margin-bottom: 35px;
 		gap: 35px 55px;
@@ -25,6 +26,7 @@
 		@media (max-width: 1200px) {
 			display: flex;
 			flex-direction: column;
+			align-items: stretch;
 			max-width: 530px;
 		}
 	}
@@ -39,6 +41,8 @@
 
 		&:hover {
 			color: var(--light-color);
+			background-color: var(--accent-color);
+			filter: brightness(75%);
 		}
 
 		@media (max-width: 1200px) {

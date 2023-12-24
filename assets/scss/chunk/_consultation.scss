@@ -46,6 +46,8 @@
 	&__button {
 		&:hover {
 			color: var(--light-color);
+			background-color: var(--accent-color);
+			filter: brightness(75%);
 		}
 	}
 

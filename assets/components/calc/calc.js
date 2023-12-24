@@ -16,18 +16,16 @@ class Calc {
 		this.squareValue = this.elem.querySelector('.calc-square__input');
 		this.calculatePriceBtn = this.elem.querySelector('.calc-price__button');
 		this.calculatePriceValue = this.elem.querySelector('[data-price-value]');
-
-		console.log(this.costButtons);
 	}
 
 	events() {
 		this.costButtons.forEach((button) => {
 			button.addEventListener('click', (e) => {
-				console.log(42);
 				const target = e.target;
 				const costValue = target.getAttribute('data-cost');
 				this.meterCost = costValue;
 				this.unitValue.textContent = this.meterCost;
+				this.calculation();
 			});
 		});
 
@@ -35,6 +33,7 @@ class Calc {
 			const targetValue = e.target.value;
 			e.target.value = targetValue.replace(/\D/g, '');
 			this.meterValue = +e.target.value;
+			this.calculation();
 		});
 
 		this.calculatePriceBtn.addEventListener('click', () => {
@@ -43,6 +42,7 @@ class Calc {
 
 		this.squarePlus.addEventListener('click', () => {
 			this.squareValue.value = ++this.meterValue;
+			this.calculation();
 		});
 
 		this.squareMinus.addEventListener('click', () => {
@@ -51,6 +51,7 @@ class Calc {
 			}
 
 			this.squareValue.value = --this.meterValue;
+			this.calculation();
 		});
 	}
 

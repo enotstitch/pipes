@@ -9,6 +9,7 @@
 
 	&__card {
 		flex-shrink: 0;
+		margin: 0 auto;
 		border: 2px solid var(--accent-color);
 		border-radius: 20px;
 		padding-bottom: 25px;
@@ -51,11 +52,15 @@
 	}
 
 	&__inner {
-		padding: 40px 25px 0 50px;
+		padding: 40px 25px;
 	}
 }
 
 .team-inner {
+	&__list {
+		padding-left: 25px;
+	}
+
 	&__title {
 		position: relative;
 		margin: 0;
