@@ -94,20 +94,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	&__icon {
-		&--btn {
-			width: 45px;
-			height: 45px;
-			fill: var(--alto-color);
-			transition: fill 0.3s;
-
-			&:hover {
-				fill: var(--accent-color);
-			}
-		}
-	}
-
-	&__item {
-		width: 100%;
+	.city-list__item {
+		width: 25%;
 	}
 }

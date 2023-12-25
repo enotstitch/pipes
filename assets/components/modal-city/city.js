@@ -1,8 +1,5 @@
 import { cityData } from './cityData.js';
 
-const cityList = document.querySelector('.city-list');
-const slideBtnPrev = document.querySelector('.modal-slides__btn--prev');
-const slideBtnNext = document.querySelector('.modal-slides__btn--next');
 const modalSearch = document.querySelector('.modal__search');
 
 let cityDataSorted = cityData.sort((a, b) => {
@@ -38,21 +35,37 @@ modalSearch.addEventListener('input', function () {
 	}
 });
 
-slideBtnNext.addEventListener('click', () => {
-	const listItem = document.querySelector('.city-list__item');
-	let listItemWidth = listItem.offsetWidth;
+const scrollSities = () => {
+	const btnsNext = document.querySelectorAll('.city-list-btn--next');
+	const btnsPrev = document.querySelectorAll('.city-list-btn--prev');
 
-	cityList.scrollLeft += listItemWidth * 4;
-});
+	btnsNext.forEach((btnNext) => {
+		btnNext.addEventListener('click', () => {
+			const citiesWrap = btnNext.closest('.cities-wrap');
+			const listItem = citiesWrap.querySelector('.city-list__item');
+			let cityList = listItem.closest('.city-list');
 
-slideBtnPrev.addEventListener('click', () => {
-	const listItem = document.querySelector('.city-list__item');
-	let listItemWidth = listItem.offsetWidth;
+			let listItemWidth = listItem.offsetWidth;
+			cityList.scrollLeft += listItemWidth;
+		});
+	});
 
-	cityList.scrollLeft += -listItemWidth * 4;
-});
+	btnsPrev.forEach((btnPrev) => {
+		btnPrev.addEventListener('click', () => {
+			const citiesWrap = btnPrev.closest('.cities-wrap');
+			const listItem = citiesWrap.querySelector('.city-list__item');
+			let cityList = listItem.closest('.city-list');
 
-const createCityItem = (cityName, cityLink = '#') => {
+			let listItemWidth = listItem.offsetWidth;
+			cityList.scrollLeft += -listItemWidth;
+		});
+	});
+};
+
+const createCityItem = (cityListWrapClass, cityName, cityLink = '#') => {
+	const cityListWrap = document.querySelector(cityListWrapClass);
+	const cityList = cityListWrap.querySelector('.city-list');
+
 	let cityItem = `
 	<li class="city-list__item list-reset">
 		<svg class="city-list__icon">
@@ -66,11 +79,14 @@ const createCityItem = (cityName, cityLink = '#') => {
 };
 
 const renderCity = () => {
-	cityList.innerHTML = '';
+	// ???
+	// cityList.innerHTML = '';
 
 	cityDataSorted.forEach((cityItem) => {
-		createCityItem(cityItem.name, cityItem.link);
+		createCityItem('.modal-slides', cityItem.name, cityItem.link);
+		createCityItem('.region-slides', cityItem.name, cityItem.link);
 	});
 };
 
 renderCity();
+scrollSities();

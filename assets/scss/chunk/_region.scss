@@ -1,0 +1,31 @@
+.region {
+	&__title {
+		text-align: center;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__map {
+		min-width: 50%;
+	}
+}
+
+.region-slides {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 45%;
+
+	.city-list {
+		max-height: 535px;
+	}
+
+	.city-list__item {
+		width: 50%;
+	}
+}
