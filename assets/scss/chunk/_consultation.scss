@@ -39,6 +39,21 @@
 		}
 	}
 
+	&__textarea {
+		outline: none;
+		border: none;
+		border-radius: 40px;
+		padding: 20px 30px;
+		font-weight: 700;
+		color: var(--dark-text-color);
+		resize: none;
+
+		&::placeholder {
+			font-weight: 700;
+			color: var(--dark-text-color);
+		}
+	}
+
 	&__policy {
 		color: var(--light-color);
 	}
