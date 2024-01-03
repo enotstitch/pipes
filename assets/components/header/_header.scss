@@ -180,10 +180,10 @@
 	}
 
 	&__link {
-		transition: filter 0.3s;
+		transition: text-decoration 0.3s;
 
 		&:hover {
-			filter: brightness(140%);
+			text-decoration: underline;
 		}
 	}
 }

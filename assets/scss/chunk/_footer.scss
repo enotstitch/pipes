@@ -54,10 +54,10 @@
 	&__policy {
 		@include adaptive-font(16, 16);
 		color: var(--alto-color);
-		transition: filter 0.3s;
+		transition: text-decoration 0.3s;
 
 		&:hover {
-			filter: brightness(140%);
+			text-decoration: underline;
 		}
 	}
 
