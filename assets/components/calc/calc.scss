@@ -171,6 +171,7 @@
 
 	&__input {
 		all: unset;
+		padding: 0 10px;
 		max-width: 260px;
 		box-sizing: border-box;
 		font-size: 30px;
@@ -224,12 +225,6 @@
 
 		&--accent-color {
 			color: var(--accent-color);
-		}
-	}
-
-	&__button {
-		@media (max-width: 576px) {
-			display: none;
 		}
 	}
 

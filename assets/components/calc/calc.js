@@ -14,7 +14,6 @@ class Calc {
 		this.squareMinus = this.squareElem.querySelector('[data-minus-btn]');
 		this.unitValue = this.elem.querySelector('.calc-unit__value');
 		this.squareValue = this.elem.querySelector('.calc-square__input');
-		this.calculatePriceBtn = this.elem.querySelector('.calc-price__button');
 		this.calculatePriceValue = this.elem.querySelector('[data-price-value]');
 	}
 
@@ -33,10 +32,6 @@ class Calc {
 			const targetValue = e.target.value;
 			e.target.value = targetValue.replace(/\D/g, '');
 			this.meterValue = +e.target.value;
-			this.calculation();
-		});
-
-		this.calculatePriceBtn.addEventListener('click', () => {
 			this.calculation();
 		});
 
