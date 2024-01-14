@@ -3,6 +3,8 @@ class Calc {
 		this.elem = document.querySelector(selector);
 		this.meterValue = 0;
 		this.meterCost = 120;
+		this.maxValue = 400;
+		this.totalPrice = 0;
 		this.findElems();
 		this.events();
 	}
@@ -28,14 +30,36 @@ class Calc {
 			});
 		});
 
+		this.squareValue.addEventListener('click', (e) => {
+			const targetValue = e.target.value;
+
+			if (targetValue == 0) {
+				e.target.value = '';
+			}
+		});
+
 		this.squareValue.addEventListener('input', (e) => {
+			if (e.target.value > 400) {
+				e.target.value = this.meterValue;
+			}
 			const targetValue = e.target.value;
 			e.target.value = targetValue.replace(/\D/g, '');
 			this.meterValue = +e.target.value;
 			this.calculation();
 		});
 
+		this.squareValue.addEventListener('blur', (e) => {
+			const targetValue = e.target.value;
+			if (!targetValue) {
+				e.target.value = 0;
+			}
+		});
+
 		this.squarePlus.addEventListener('click', () => {
+			if (this.squareValue.value >= 400) {
+				return;
+			}
+
 			this.squareValue.value = ++this.meterValue;
 			this.calculation();
 		});
@@ -51,8 +75,20 @@ class Calc {
 	}
 
 	calculation() {
-		const totalPrice = this.meterCost * this.meterValue;
-		this.calculatePriceValue.textContent = totalPrice;
+		this.totalPrice = this.meterCost * this.meterValue;
+		this.formatting();
+		this.calculatePriceValue.textContent = this.totalPrice;
+	}
+
+	formatting() {
+		this.totalPrice = this.totalPrice.toString();
+		const priceLength = this.totalPrice.length;
+
+		if (priceLength > 3) {
+			const rem = this.totalPrice.substr(priceLength - 3, priceLength);
+			//! Метод замены нужно поменять, не работает, если в числе есть такие же подстроки
+			this.totalPrice = this.totalPrice.replace(rem, ` ${rem}`);
+		}
 	}
 }
 
