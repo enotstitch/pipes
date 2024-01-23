@@ -31,17 +31,16 @@ class Calc {
 		});
 
 		this.squareValue.addEventListener('click', (e) => {
-			const targetValue = e.target.value;
-
 			if (targetValue == 0) {
 				e.target.value = '';
 			}
 		});
 
 		this.squareValue.addEventListener('input', (e) => {
-			if (e.target.value > 400) {
+			if (e.target.value > this.maxValue) {
 				e.target.value = this.meterValue;
 			}
+
 			const targetValue = e.target.value;
 			e.target.value = targetValue.replace(/\D/g, '');
 			this.meterValue = +e.target.value;
@@ -56,7 +55,7 @@ class Calc {
 		});
 
 		this.squarePlus.addEventListener('click', () => {
-			if (this.squareValue.value >= 400) {
+			if (this.squareValue.value >= this.maxValue) {
 				return;
 			}
 
@@ -85,9 +84,9 @@ class Calc {
 		const priceLength = this.totalPrice.length;
 
 		if (priceLength > 3) {
+			const warp = this.totalPrice.substr(0, priceLength - 3);
 			const rem = this.totalPrice.substr(priceLength - 3, priceLength);
-			//! Метод замены нужно поменять, не работает, если в числе есть такие же подстроки
-			this.totalPrice = this.totalPrice.replace(rem, ` ${rem}`);
+			this.totalPrice = `${warp} ${rem}`;
 		}
 	}
 }
