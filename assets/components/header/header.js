@@ -39,3 +39,20 @@ if (menuLinks.length > 0) {
 		}
 	}
 }
+
+// Доп. шапка при скролле
+const fixedHeader = document.querySelector('#fixedHeader');
+
+document.addEventListener('scroll', () => {
+	scrollHandler();
+});
+
+const scrollHandler = () => {
+	const scrollValue = document.documentElement.scrollTop;
+
+	if (scrollValue >= 430) {
+		fixedHeader.classList.add('active');
+	} else {
+		fixedHeader.classList.remove('active');
+	}
+};
