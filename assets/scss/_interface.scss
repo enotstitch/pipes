@@ -11,6 +11,10 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@media (max-width: 576px) {
+			padding-top: 250px;
+		}
 	}
 
 	&-application {

@@ -42,6 +42,7 @@ if (menuLinks.length > 0) {
 
 // Доп. шапка при скролле
 const fixedHeader = document.querySelector('#fixedHeader');
+const screenWidth = window.screen.width;
 
 document.addEventListener('scroll', () => {
 	scrollHandler();
@@ -50,7 +51,7 @@ document.addEventListener('scroll', () => {
 const scrollHandler = () => {
 	const scrollValue = document.documentElement.scrollTop;
 
-	if (scrollValue >= 430) {
+	if (scrollValue >= 430 && screenWidth > 576) {
 		fixedHeader.classList.add('active');
 	} else {
 		fixedHeader.classList.remove('active');
