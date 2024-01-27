@@ -37,7 +37,9 @@ class Calc {
 		});
 
 		this.squareValue.addEventListener('input', (e) => {
-			if (e.target.value > this.maxValue) {
+			const isFirstSymb = +e.target.value > 0 && e.data == '0' && e.target.value[0] == 0;
+
+			if (e.target.value > this.maxValue || isFirstSymb) {
 				e.target.value = this.meterValue;
 			}
 
