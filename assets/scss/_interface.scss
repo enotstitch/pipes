@@ -347,18 +347,17 @@
 		flex-shrink: 0;
 		align-items: center;
 		margin-bottom: 12px;
+		padding-right: 5px;
+		padding-left: 30px;
+		background-image: url('@img/team/arrow-circle.svg');
+		background-position: center left;
+		background-size: 20px 18px;
+		background-repeat: no-repeat;
 		gap: 8px;
 
 		&--hide {
 			display: none;
 		}
-	}
-
-	&__icon {
-		flex-shrink: 0;
-		width: 20px;
-		height: 19px;
-		fill: var(--accent-color);
 	}
 
 	&__link {

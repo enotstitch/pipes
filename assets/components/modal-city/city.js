@@ -68,9 +68,6 @@ const createCityItem = (cityListWrapClass, cityName, cityLink = '#') => {
 
 	let cityItem = `
 	<li class="city-list__item list-reset">
-		<svg class="city-list__icon">
-			<use href="img/icons/sprite.svg#arrow-right"></use>
-		</svg>
 		<a class="city-list__link link-reset" href="${cityLink}">${cityName}</a>
 	</li>
 	`;
