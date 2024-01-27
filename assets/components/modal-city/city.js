@@ -83,8 +83,12 @@ const renderCity = () => {
 	// cityList.innerHTML = '';
 
 	cityDataSorted.forEach((cityItem) => {
-		createCityItem('.modal-slides', cityItem.name, cityItem.link);
-		createCityItem('.region-slides', cityItem.name, cityItem.link);
+		try {
+			createCityItem('.modal-slides', cityItem.name, cityItem.link);
+		} catch {}
+		try {
+			createCityItem('.region-slides', cityItem.name, cityItem.link);
+		} catch {}
 	});
 };
 

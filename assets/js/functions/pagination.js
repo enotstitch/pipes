@@ -1,6 +1,6 @@
 const screenWidth = window.screen.width;
 
-document.addEventListener('DOMContentLoaded', () => {
+const pagination = () => {
 	const content = document.querySelector('.our-projects__cards');
 	let itemsPerPage = 8;
 	if (screenWidth <= 640) {
@@ -56,4 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	createPageButtons();
 	showPage(currentPage);
-});
+};
+
+try {
+	document.addEventListener('DOMContentLoaded', pagination());
+} catch {}

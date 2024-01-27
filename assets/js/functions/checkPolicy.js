@@ -13,6 +13,12 @@ const checkPolicy = (formSelector, buttonSelector = '.button') => {
 	});
 };
 
-checkPolicy('.application__form');
-checkPolicy('.calc__form', '.calc-data__button');
-checkPolicy('.consultation__form');
+try {
+	checkPolicy('.application__form');
+} catch {}
+try {
+	checkPolicy('.calc__form', '.calc-data__button');
+} catch {}
+try {
+	checkPolicy('.consultation__form');
+} catch {}
