@@ -47,7 +47,6 @@
 	}
 
 	&__link {
-		@include adaptive-font(20, 15);
 		@media (max-width: 576px) {
 			padding: 5px 8px;
 		}
