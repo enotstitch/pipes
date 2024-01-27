@@ -300,8 +300,7 @@
 		height: 20px;
 	}
 
-	&__text {
-		margin: 0;
+	&__link {
 		max-width: 170px;
 	}
 
@@ -474,6 +473,7 @@
 
 	.menu__link {
 		@include adaptive-font(20, 20);
+		position: static;
 	}
 }
 
