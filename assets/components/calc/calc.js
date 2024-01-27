@@ -31,7 +31,7 @@ class Calc {
 		});
 
 		this.squareValue.addEventListener('click', (e) => {
-			if (targetValue == 0) {
+			if (e.target.value == 0) {
 				e.target.value = '';
 			}
 		});
