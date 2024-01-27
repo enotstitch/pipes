@@ -120,12 +120,14 @@
 		}
 	}
 
-	& .city-list-btn {
-		display: none;
-	}
+	@media (max-width: 680px) {
+		& .city-list-btn {
+			display: none;
+		}
 
-	& .city-list {
-		display: flex;
-		flex-flow: column nowrap;
+		& .city-list {
+			display: flex;
+			flex-flow: column nowrap;
+		}
 	}
 }

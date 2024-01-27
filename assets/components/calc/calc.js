@@ -91,4 +91,6 @@ class Calc {
 	}
 }
 
-new Calc('.calc');
+try {
+	new Calc('.calc');
+} catch {}
