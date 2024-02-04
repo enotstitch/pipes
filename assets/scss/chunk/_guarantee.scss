@@ -6,6 +6,7 @@
 	&__wrap {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		justify-content: space-between;
 	}
 
@@ -13,15 +14,20 @@
 		display: flex;
 		align-items: start;
 		justify-content: space-between;
-		margin-bottom: 120px;
-		gap: 15px;
+		margin-bottom: 60px;
+		border-bottom: 1px solid var(--alto-color);
+		padding-bottom: 60px;
+		gap: 40px;
 
 		&:last-child {
 			margin: 0;
+			border-bottom: none;
+			padding: 0;
 		}
 
 		&:nth-child(even) {
 			flex-direction: row-reverse;
+			text-align: end;
 
 			@media (max-width: 1200px) {
 				flex-direction: column;
@@ -31,10 +37,17 @@
 		@media (max-width: 1200px) {
 			flex-direction: column;
 			align-items: center;
+			max-width: 465px;
+			gap: 15px;
 		}
 
 		@media (max-width: 576px) {
 			align-items: start;
+		}
+
+		@media (max-width: 490px) {
+			border-bottom: none;
+			max-width: 360px;
 		}
 	}
 }
@@ -59,28 +72,65 @@
 	}
 
 	&__inner {
+		position: relative;
+		margin-bottom: 50px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -35px;
+			border-radius: 2px;
+			width: 230px;
+			height: 3px;
+			background-color: var(--accent-color);
+		}
+
 		@media (max-width: 1200px) {
 			display: flex;
 			align-items: center;
+			gap: 30px;
+		}
+
+		@media (max-width: 768px) {
+			justify-content: center;
+		}
+
+		@media (max-width: 490px) {
+			&::before {
+				left: 50%;
+				right: unset;
+				bottom: -20px;
+				transform: translateX(-50%);
+			}
 		}
 	}
 
 	&__icon {
 		margin-bottom: 30px;
 		height: 100px;
+		max-width: 110px;
+
+		@media (max-width: 1200px) {
+			margin-bottom: 0;
+		}
 
 		@media (max-width: 490px) {
 			height: 63px;
+			max-width: 60px;
 		}
 	}
 
 	&__subtitle {
 		@include adaptive-font(24, 20);
 		margin: 0;
-		margin-bottom: 50px;
 		line-height: 126%;
 		text-transform: uppercase;
 		color: var(--accent-color);
+
+		@media (max-width: 490px) {
+			text-align: start;
+		}
 	}
 
 	&__text {
@@ -88,8 +138,32 @@
 		font-weight: 500;
 		line-height: 126%;
 
+		@media (max-width: 768px) {
+			text-align: center;
+		}
+
 		@media (max-width: 490px) {
-			width: 360px;
+			max-width: 360px;
+			text-align: start;
+		}
+	}
+
+	&:nth-child(even) {
+		.guarantee-block__inner {
+			&::before {
+				left: unset;
+				right: 0;
+			}
+			@media (max-width: 768px) {
+				flex-direction: row-reverse;
+			}
+			@media (max-width: 490px) {
+				flex-direction: row;
+
+				&::before {
+					left: 50%;
+				}
+			}
 		}
 	}
 }

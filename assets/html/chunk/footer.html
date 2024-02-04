@@ -1,5 +1,81 @@
 <footer class="footer">
-	<div class="container">
+	<div class="footer__container container">
+		<div class="footer__wrap">
+			<div class="footer__inner">
+				<div class="footer__contacts">
+					<div class="footer__connection connection">
+						<h2 class="footer__title connection__title">
+							Контакты
+						</h2>
+						<div class="connection__items">
+							<div class="connection__item">
+								<svg class="connection__icon connection__icon--light connection__icon--geo">
+									<use href="img/icons/sprite.svg#geo"></use>
+								</svg>
+								<address class="connection__address">
+									Москва,улица Стартовая, дом 1 <br> строение 4
+								</address>
+							</div>
+							<div class="connection__item">
+								<svg class="connection__icon connection__icon--light connection__icon--phone">
+									<use href="img/icons/sprite.svg#phone"></use>
+								</svg>
+								<a class="connection__phone link-reset" href="tel:79255027110">+7 (925) 502-71-10</a>
+							</div>
+							<div class="connection__item">
+								<svg class="connection__icon connection__icon--light connection__icon--mail">
+									<use href="img/icons/sprite.svg#mail"></use>
+								</svg>
+								<a class="connection__mail link-reset" href="mailto:pokraska-trub@mail.ru">pokraska-trub@mail.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__inner">
+				<div class="footer__services footer-services">
+					<h2 class="footer__title services__title">
+						Услуги
+					</h2>
+					<ul class="footer-services__list list-reset">
 
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Покраска кирпичных дымовых труб</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Покраска железобетонных дымовых труб</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Покраска металлических дымовых труб</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Ремонт металлических дымовых труб</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Покраска водонапорной башни</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Ремонт водонапорной башни</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Ремонт кирпичной дымовой трубы</a>
+						</li>
+						<li class="footer-services__item">
+							<a class="footer-services__link link-reset" href="#">Ремонт железобетонных дымовых труб</a>
+						</li>
+					</ul>
+				</div>
+
+				<a class="footer__policy link-reset" href="#/">Политика конфиденциальности</a>
+			</div>
+		</div>
+		<div class="footer__copyright copyright">
+			<svg class="copyright__icon">
+				<use href="img/icons/sprite.svg#copyright"></use>
+			</svg>
+			<span class="copyright__text">Copyright</span>
+		</div>
+		<a class="footer__upward-link link-reset" href="#header"></a>
 	</div>
 </footer>
+@include('../../components/modal-city/modal-city.html')

@@ -1,0 +1,110 @@
+.footer {
+	padding: 35px 0;
+	color: var(--light-color);
+	background-color: var(--san-juan-color);
+
+	&__container {
+		position: relative;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: space-between;
+		margin-bottom: 55px;
+		gap: 40px;
+	}
+
+	&__title {
+		@include adaptive-font(24, 20);
+		margin: 0;
+		margin-bottom: 40px;
+		font-family: Poppins, sans-serif;
+	}
+
+	&__connection {
+		color: var(--light-color);
+	}
+
+	&__services {
+		margin-bottom: 30px;
+	}
+
+	&-services {
+		&__item {
+			@include adaptive-font(16, 14);
+			margin-bottom: 5px;
+			text-transform: uppercase;
+		}
+
+		&__link {
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: brightness(75%);
+			}
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__policy {
+		@include adaptive-font(16, 16);
+		color: var(--alto-color);
+		transition: text-decoration 0.3s;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__copyright {
+		margin: 0 auto;
+		max-width: fit-content;
+	}
+
+	&__upward-link {
+		position: absolute;
+		right: -30px;
+		top: -30px;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		background-image: url('@img/icons/sprite.svg#arrow-upward');
+		background-position: center;
+		background-size: 39px;
+		background-repeat: no-repeat;
+		background-color: var(--light-color);
+
+		@media (max-width: 768px) {
+			right: 0;
+			top: -45px;
+			width: 65px;
+			height: 65px;
+			background-size: 30px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 50px 0;
+	}
+}
+
+.copyright {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__text {
+		@include adaptive-font(16, 16);
+		text-transform: uppercase;
+	}
+}

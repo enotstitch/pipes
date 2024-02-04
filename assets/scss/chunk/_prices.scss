@@ -1,0 +1,30 @@
+.prices {
+	&__title {
+		text-align: center;
+	}
+
+	.price__row {
+		&:last-child {
+			border-bottom: 1px solid var(--accent-color);
+		}
+	}
+
+	.spollers__icon {
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		&--arrow {
+			width: 40px;
+			height: 40px;
+			fill: var(--dark-text-color);
+			rotate: 90deg;
+
+			@media (max-width: 768px) {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}

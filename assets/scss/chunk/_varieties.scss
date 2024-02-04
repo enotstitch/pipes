@@ -4,7 +4,6 @@
 	}
 
 	&__text {
-		@include adaptive-font(20, 14);
 		margin: 0;
 		margin-bottom: 35px;
 		font-weight: 500;
@@ -17,8 +16,11 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		max-width: 275px;
 		gap: 15px;
+	}
+
+	&__inner {
+		position: relative;
 	}
 
 	&__item {
@@ -30,14 +32,8 @@
 		height: 24px;
 	}
 
-	&__cards {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 20px;
-	}
-
 	&__card {
+		margin: 0 auto;
 		border: 6px solid var(--accent-color);
 		border-radius: 15px;
 		max-width: 365px;
@@ -45,7 +41,6 @@
 
 	&__img {
 		border-radius: 10px;
-		width: 354px;
 		height: 513px;
 		background-position: center;
 		background-size: cover;

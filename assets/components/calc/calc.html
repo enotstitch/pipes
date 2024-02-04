@@ -1,0 +1,91 @@
+<div class="calc">
+	<div class="calc__header calc__header--desktop">
+		<ul class="calc__list list-reset">
+			<li class="calc__item">
+				<button class="calc__button btn-reset" data-cost="200">
+					Покраска сооружений
+				</button>
+			</li>
+			<li class="calc__item">
+				<button class="calc__button btn-reset" data-cost="1500">
+					Ремонт сооружений
+				</button>
+			</li>
+			<li class="calc__item">
+				<button class="calc__button btn-reset" data-cost="40">
+					Очистка крыши от снега
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div class="calc__header calc__header--mobile select calc-select">
+		<div class="calc-select__header select__header">
+			<span class="calc-select__current select__current">Покраска сооружений</span>
+			<svg class="calc-select__icon">
+				<use href="img/icons/sprite.svg#arrow"></use>
+			</svg>
+		</div>
+
+		<div class="calc-select__body">
+			<div class="calc-select__item select__item calc__button" data-cost="200">Покраска сооружений</div>
+			<div class="calc-select__item select__item calc__button" data-cost="1500">Ремонт сооружений</div>
+			<div class="calc-select__item select__item calc__button" data-cost="40">Очистка крыши от снега</div>
+		</div>
+	</div>
+	<form class="calc__form calc-form" action="#">
+		<div class="calc-form__control">
+			<div class="calc-form__square calc-form__inner calc-square">
+				<span class="calc-square__text">
+					Кол-во квадратных метров
+				</span>
+				<div class="calc-square__inner">
+					<button class="calc-square__button btn-reset" type="button" data-plus-btn="">+</button>
+					<input class="calc-square__input no-mask" type="tel" name="square" id="calc-square" value="0">
+					<button class="calc-square__button btn-reset" type="button" data-minus-btn="">-</button>
+				</div>
+			</div>
+			<div class="calc-form__unit calc-form__inner calc-unit">
+				<span class="calc-unit__text">
+					Стоимость 1 кватратного метра в рублях
+				</span>
+				<span class="calc-unit__value">
+					200
+				</span>
+			</div>
+		</div>
+		<div class="calc-form__body">
+			<div class="calc-form__info">
+				<div class="calc-form__price calc-price">
+					<span class="calc-price__value">
+						Стоимость: <span class="calc-price__value calc-price__value--accent-color" data-price-value="">0</span> руб.
+					</span>
+				</div>
+				<p class="calc-form__text">
+					* Обращаем ваше внимание, что стоимость может меняться от особенностей заказа. Окончательная цена будет
+					озвучена нашим
+					менеджером после согласования всех условий.
+				</p>
+			</div>
+			<div class="calc-form__data calc-data">
+				<div class="calc-data__items">
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="text" placeholder="Ваше имя">
+					</label>
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="email" placeholder="Email">
+					</label>
+					<label class="calc-data__item">
+						<input class="calc-data__input input" type="tel" placeholder="Номер телефона">
+					</label>
+					<label class="calc-data__item policy checkbox">
+						<input class="checkbox__real" type="checkbox">
+						<span class="checkbox__fake"></span>
+						<span class="calc-data__text">Согласен на обработку персональных данных</span>
+					</label>
+				</div>
+				<button class="calc-form__button calc-data__button button btn-reset">Сделать заказ по
+					рассчету</button>
+			</div>
+		</div>
+	</form>
+</div>

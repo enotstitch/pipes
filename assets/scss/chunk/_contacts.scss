@@ -1,0 +1,25 @@
+.contacts {
+	&__title {
+		text-align: center;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: end;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	&__map {
+		border: 1px solid var(--accent-color);
+		border-radius: 10px;
+		width: 100%;
+		min-height: 380px;
+		max-width: 600px;
+
+		@media (max-width: 768px) {
+			min-height: 325px;
+		}
+	}
+}

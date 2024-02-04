@@ -1,12 +1,19 @@
 .hero {
 	&__wrap {
+		margin-bottom: 45px;
 		max-width: 755px;
 	}
 
 	&__cards {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+			justify-content: space-around;
+		}
 	}
 
 	&__card {
@@ -18,11 +25,6 @@
 		max-width: 200px;
 	}
 
-	&__icon {
-		width: 40px;
-		height: 52px;
-	}
-
 	&__text {
 		margin: 0;
 		font-weight: 500;
@@ -31,6 +33,40 @@
 		text-align: center;
 		text-transform: lowercase;
 		color: var(--light-color);
+	}
+
+	&__form {
+		display: flex;
+		gap: 55px;
+
+		@media (max-width: 992px) {
+			gap: 20px;
+		}
+
+		@media (max-width: 768px) {
+			gap: 10px;
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		width: 530px;
+
+		@media (max-width: 992px) {
+			width: 390px;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+	&__button {
+		&:hover {
+			color: var(--light-color);
+			background-color: var(--accent-color);
+			filter: brightness(75%);
+		}
 	}
 }
 
@@ -41,12 +77,18 @@
 		@include adaptive-font(40, 24);
 		margin-bottom: 70px;
 		color: var(--light-color);
+
+		&::after {
+			left: 0;
+			transform: none;
+		}
 	}
 
 	&__text {
 		@include adaptive-font(32, 20);
 		margin: 0;
 		font-weight: 400;
+		line-height: 126%;
 		color: var(--light-color);
 	}
 }
@@ -55,11 +97,18 @@
 	&__icon {
 		width: 40px;
 		height: 52px;
+
+		@media (max-width: 576px) {
+			width: 20px;
+			height: 26px;
+		}
 	}
 
 	&__text {
 		margin: 0;
+		max-width: 170px;
 		font-weight: 500;
+		font-size: 18px;
 		text-align: center;
 		text-transform: lowercase;
 		color: var(--light-color);
