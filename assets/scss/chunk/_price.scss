@@ -1,5 +1,5 @@
 .price {
-	&__content {
+	&__wrap {
 		margin-bottom: 35px;
 	}
 
@@ -22,43 +22,34 @@
 	}
 
 	&__list {
+		counter-reset: number 0;
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
 	}
 
-	.price-item--one {
-		background-image: url('@img/price/price-1.svg');
+	&__item {
+		display: flex;
+		padding: 0;
+		gap: 10px;
 	}
 
-	.price-item--two {
-		background-image: url('@img/price/price-2.svg');
-	}
-
-	.price-item--three {
-		background-image: url('@img/price/price-3.svg');
-	}
-}
-
-.price-wrap {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 75px;
-	gap: 25px;
-
-	&__text {
-		margin: 0;
-		font-weight: 500;
-	}
-}
-
-.price-wrap-text {
-	&--price {
-		margin: 0 auto;
-		border-radius: 10px;
-		padding: 30px 20px;
-		max-width: 1145px;
+	&__number {
+		counter-increment: number;
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		border: 3px solid var(--accent-color);
+		border-radius: 100%;
+		width: 25px;
+		height: 25px;
 		font-weight: 700;
-		background-color: var(--peach-schnapps);
+		font-size: 14px;
+		color: var(--accent-color);
+
+		&::before {
+			content: counter(number);
+		}
 	}
 }
