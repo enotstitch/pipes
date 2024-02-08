@@ -1,5 +1,3 @@
-const { log } = require('gulp-util');
-
 // Меню бургер
 const menuBurger = document.querySelector('.menu__burger');
 const menuBody = document.querySelector('.menu__body');
