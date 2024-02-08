@@ -46,7 +46,7 @@ const scrollSities = () => {
 			let cityList = listItem.closest('.city-list');
 
 			let listItemWidth = listItem.offsetWidth;
-			cityList.scrollLeft += listItemWidth;
+			cityList.scrollLeft += listItemWidth * 4;
 		});
 	});
 
@@ -57,7 +57,7 @@ const scrollSities = () => {
 			let cityList = listItem.closest('.city-list');
 
 			let listItemWidth = listItem.offsetWidth;
-			cityList.scrollLeft += -listItemWidth;
+			cityList.scrollLeft += -listItemWidth * 4;
 		});
 	});
 };
@@ -76,9 +76,6 @@ const createCityItem = (cityListWrapClass, cityName, cityLink = '#') => {
 };
 
 const renderCity = () => {
-	// ???
-	// cityList.innerHTML = '';
-
 	cityDataSorted.forEach((cityItem) => {
 		try {
 			createCityItem('.modal-slides', cityItem.name, cityItem.link);
