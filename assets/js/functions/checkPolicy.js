@@ -18,6 +18,9 @@ const checkPolicy = (sectionSelector, buttonSelector = '.button') => {
 };
 
 try {
+	checkPolicy('#modalCall');
+} catch {}
+try {
 	checkPolicy('.application');
 } catch {}
 try {
