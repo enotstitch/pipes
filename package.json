@@ -77,8 +77,6 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"stream": "^0.0.2",
-		"swiper": "^11.0.5",
-		"timers": "^0.1.1"
+		"swiper": "^11.0.5"
 	}
 }
