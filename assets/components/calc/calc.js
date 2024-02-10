@@ -17,6 +17,12 @@ class Calc {
 		this.unitValue = this.elem.querySelector('.calc-unit__value');
 		this.squareValue = this.elem.querySelector('.calc-square__input');
 		this.calculatePriceValue = this.elem.querySelector('[data-price-value]');
+
+		this.hiddenService = this.elem.querySelector('#calc-service');
+		this.hiddenCost = this.elem.querySelector('#calc-cost');
+		this.hiddenMeter = this.elem.querySelector('#calc-meter');
+
+		console.log(this.hiddenService);
 	}
 
 	events() {
@@ -27,6 +33,7 @@ class Calc {
 				this.meterCost = costValue;
 				this.unitValue.textContent = this.meterCost;
 				this.calculation();
+				this.hiddenService.value = target.textContent.trim();
 			});
 		});
 
@@ -80,6 +87,8 @@ class Calc {
 		this.totalPrice = this.meterCost * this.meterValue;
 		this.formatting();
 		this.calculatePriceValue.textContent = this.totalPrice;
+		this.hiddenCost.value = this.totalPrice;
+		this.hiddenMeter.value = this.meterValue;
 	}
 
 	formatting() {
